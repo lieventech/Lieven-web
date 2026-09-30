@@ -3,254 +3,2013 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LIEVEN — Hardware & Electronics Engineering</title>
-<meta name="description" content="LIEVEN — PCB Design, FPGA, Embedded Systems and Design Verification for Medical, Defence, Automotive and EV applications. Based in Marathahalli, Bangalore.">
+
+<title>LIEVEN — Design Verification, FPGA & Hardware Engineering</title>
+
+<meta name="description"
+content="LIEVEN provides Design Verification, CPU, IP and SoC Verification for RISC-V and Arm architectures, FPGA Engineering, PCB Design and Embedded Systems. Based in Marathahalli, Bangalore.">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#f5f5f2;color:#111;line-height:1.5}
-header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(245,245,242,.92);backdrop-filter:blur(12px);border-bottom:1px solid #ddd}
-.nav{max-width:1250px;margin:auto;padding:20px 30px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:27px;font-weight:900;letter-spacing:5px}.logo span{color:#ff5a00}
-.nav-links{display:flex;gap:30px}.nav-links a{text-decoration:none;color:#111;font-size:14px;font-weight:600}.nav-links a:hover{color:#ff5a00}
-.hero{min-height:100vh;padding:170px 30px 100px;max-width:1250px;margin:auto;display:flex;flex-direction:column;justify-content:center}
-.small-label,.section-number{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#666;margin-bottom:25px}
-.section-number{color:#ff5a00;font-weight:bold;letter-spacing:2px}
-.hero h1{font-size:clamp(55px,8vw,110px);line-height:.92;letter-spacing:-5px;max-width:1100px;margin-bottom:40px}.hero h1 span{color:#ff5a00}
-.hero-description{max-width:720px;font-size:21px;color:#555;margin-bottom:45px}
-.hero-buttons{display:flex;gap:15px;flex-wrap:wrap}.btn{padding:15px 24px;text-decoration:none;font-weight:bold;border:1px solid #111;transition:.3s}
-.btn-dark{background:#111;color:white}.btn-dark:hover{background:#ff5a00;border-color:#ff5a00}.btn-light{color:#111}.btn-light:hover{background:#111;color:white}
-.marquee{overflow:hidden;white-space:nowrap;border-top:1px solid #ccc;border-bottom:1px solid #ccc;padding:18px 0;font-size:13px;letter-spacing:3px;text-transform:uppercase}
-.marquee-content{display:inline-block;animation:scroll 30s linear infinite}.marquee span{margin-right:60px}
-@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.intro{max-width:1250px;margin:auto;padding:130px 30px}.intro-grid{display:grid;grid-template-columns:1fr 2fr;gap:70px}
-.intro h2{font-size:50px;line-height:1;letter-spacing:-2px}.intro-text{font-size:26px;line-height:1.35;max-width:750px}.intro-text strong{color:#ff5a00}
-.capabilities{background:#111;color:white;padding:120px 30px}.capabilities-inner{max-width:1250px;margin:auto}
-.capabilities-header{margin-bottom:70px}.capabilities-header h2{font-size:clamp(45px,7vw,85px);line-height:.95;letter-spacing:-4px}.capabilities-header p{margin-top:25px;color:#aaa;max-width:650px;font-size:18px}
-.capability-grid{display:grid;grid-template-columns:repeat(2,1fr)}.capability{padding:45px 30px 45px 0;border-top:1px solid #444}.capability:nth-child(even){padding-left:30px;border-left:1px solid #444}
-.capability-number{color:#ff5a00;font-size:14px;margin-bottom:25px}.capability h3{font-size:30px;margin-bottom:12px}.capability p{color:#aaa;max-width:550px}
-.tags{margin-top:20px}.tag{display:inline-block;border:1px solid #555;padding:6px 10px;margin:3px;font-size:11px;color:#ccc}
-.industries{padding:120px 30px;max-width:1250px;margin:auto}.industries h2{font-size:65px;letter-spacing:-3px;margin-bottom:60px}
-.industry-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #bbb;border-left:1px solid #bbb}
-.industry{min-height:230px;padding:30px;border-right:1px solid #bbb;border-bottom:1px solid #bbb}.industry-number{color:#ff5a00;font-size:13px;margin-bottom:40px}.industry h3{font-size:24px;margin-bottom:10px}.industry p{color:#666}
-.process{background:#e8e8e3;padding:120px 30px}.process-inner{max-width:1250px;margin:auto}.process h2{font-size:65px;letter-spacing:-3px;margin-bottom:70px}
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#aaa}.step{background:#e8e8e3;padding:35px;min-height:300px}.step-number{font-size:14px;color:#ff5a00;margin-bottom:60px}.step h3{font-size:27px;margin-bottom:15px}.step p{color:#555}
-.why{padding:130px 30px;max-width:1250px;margin:auto}.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}.why h2{font-size:65px;line-height:.95;letter-spacing:-3px}.why-content p{font-size:20px;color:#555;margin-bottom:25px}.points{margin-top:30px}.point{padding:18px 0;border-top:1px solid #ccc;font-weight:bold}
-.cta{background:#ff5a00;color:white;padding:130px 30px}.cta-inner{max-width:1250px;margin:auto}.cta h2{font-size:clamp(55px,8vw,105px);line-height:.9;letter-spacing:-5px;max-width:1000px}.cta p{margin-top:35px;font-size:20px;max-width:600px}.cta-button{display:inline-block;margin-top:35px;padding:17px 30px;background:#111;color:white;text-decoration:none;font-weight:bold}
-.contact{background:#111;color:white;padding:90px 30px}.contact-inner{max-width:1250px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:80px}.contact h2{font-size:55px;line-height:1}.contact-details{font-size:19px}.contact-details div{padding:18px 0;border-bottom:1px solid #444}.contact-details a{color:white;text-decoration:none}.contact-details a:hover{color:#ff5a00}
-footer{background:#080808;color:#777;padding:25px 30px;display:flex;justify-content:space-between;font-size:13px}
-@media(max-width:800px){
-.nav{padding:17px 20px}.nav-links{display:none}.hero{padding:140px 20px 80px}.hero h1{font-size:58px;letter-spacing:-3px}.hero-description{font-size:18px}
-.intro,.industries,.why{padding:80px 20px}.intro-grid,.why-grid,.contact-inner{grid-template-columns:1fr;gap:40px}.intro h2,.industries h2,.process h2,.why h2{font-size:45px}.intro-text{font-size:21px}
-.capabilities{padding:80px 20px}.capability-grid{grid-template-columns:1fr}.capability{padding:35px 0!important;border-left:none!important}
-.industry-grid{grid-template-columns:1fr 1fr}.industry{min-height:190px;padding:20px}
-.process{padding:80px 20px}.process-grid{grid-template-columns:1fr}.step{min-height:auto}
-.cta{padding:90px 20px}.cta h2{font-size:58px;letter-spacing:-3px}.contact{padding:70px 20px}.contact h2{font-size:45px}
-footer{flex-direction:column;gap:10px}
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f2;
+    color: #111;
+    line-height: 1.5;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(245,245,242,0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #ddd;
+}
+
+.nav {
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.logo span {
+    color: #ff5a00;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #ff5a00;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    padding: 170px 30px 100px;
+
+    max-width: 1250px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.small-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 110px);
+    line-height: 0.9;
+    letter-spacing: -5px;
+
+    max-width: 1100px;
+
+    margin-bottom: 40px;
+}
+
+.hero h1 span {
+    color: #ff5a00;
+}
+
+.hero-description {
+    max-width: 780px;
+
+    font-size: 21px;
+    color: #555;
+
+    margin-bottom: 45px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 24px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border: 1px solid #111;
+
+    transition: 0.3s;
+}
+
+.btn-dark {
+    background: #111;
+    color: white;
+}
+
+.btn-dark:hover {
+    background: #ff5a00;
+    border-color: #ff5a00;
+}
+
+.btn-light {
+    color: #111;
+}
+
+.btn-light:hover {
+    background: #111;
+    color: white;
+}
+
+
+/* =========================
+   MOVING SERVICES
+========================= */
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+    padding: 18px 0;
+
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.marquee-content {
+    display: inline-block;
+
+    animation: scroll 32s linear infinite;
+}
+
+.marquee span {
+    margin-right: 60px;
+}
+
+@keyframes scroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 130px 30px;
+}
+
+.intro-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+
+    gap: 70px;
+}
+
+.section-number {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #ff5a00;
+
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+.intro h2 {
+    font-size: 50px;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+.intro-text {
+    font-size: 26px;
+
+    line-height: 1.35;
+
+    max-width: 780px;
+}
+
+.intro-text strong {
+    color: #ff5a00;
+}
+
+
+/* =========================
+   CAPABILITIES
+========================= */
+
+.capabilities {
+    background: #111;
+
+    color: white;
+
+    padding: 120px 30px;
+}
+
+.capabilities-inner {
+    max-width: 1250px;
+
+    margin: auto;
+}
+
+.capabilities-header {
+    margin-bottom: 70px;
+}
+
+.capabilities-header h2 {
+    font-size: clamp(45px, 7vw, 85px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+.capabilities-header p {
+    margin-top: 25px;
+
+    color: #aaa;
+
+    max-width: 700px;
+
+    font-size: 18px;
+}
+
+.capability-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.capability {
+    padding: 45px 30px 45px 0;
+
+    border-top: 1px solid #444;
+}
+
+.capability:nth-child(even) {
+    padding-left: 30px;
+
+    border-left: 1px solid #444;
+}
+
+.capability.primary {
+    background: #171717;
+
+    padding: 50px 35px;
+
+    margin: -10px 0 10px;
+
+    border: 1px solid #333;
+}
+
+.capability.primary h3 {
+    font-size: 38px;
+}
+
+.capability-number {
+    color: #ff5a00;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+.capability h3 {
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+.capability p {
+    color: #aaa;
+
+    max-width: 570px;
+}
+
+.tags {
+    margin-top: 20px;
+}
+
+.tag {
+    display: inline-block;
+
+    border: 1px solid #555;
+
+    padding: 6px 10px;
+
+    margin: 3px;
+
+    font-size: 11px;
+
+    color: #ccc;
+}
+
+
+/* =========================
+   INDUSTRIES
+========================= */
+
+.industries {
+    padding: 120px 30px;
+
+    max-width: 1250px;
+
+    margin: auto;
+}
+
+.industries h2 {
+    font-size: 65px;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 60px;
+}
+
+.industry-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid #bbb;
+    border-left: 1px solid #bbb;
+}
+
+.industry {
+    min-height: 230px;
+
+    padding: 30px;
+
+    border-right: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+}
+
+.industry-number {
+    color: #ff5a00;
+
+    font-size: 13px;
+
+    margin-bottom: 40px;
+}
+
+.industry h3 {
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+.industry p {
+    color: #666;
+}
+
+
+/* =========================
+   PROCESS
+========================= */
+
+.process {
+    background: #e8e8e3;
+
+    padding: 120px 30px;
+}
+
+.process-inner {
+    max-width: 1250px;
+
+    margin: auto;
+}
+
+.process h2 {
+    font-size: 65px;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 70px;
+}
+
+.process-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1px;
+
+    background: #aaa;
+}
+
+.step {
+    background: #e8e8e3;
+
+    padding: 35px;
+
+    min-height: 300px;
+}
+
+.step-number {
+    font-size: 14px;
+
+    color: #ff5a00;
+
+    margin-bottom: 60px;
+}
+
+.step h3 {
+    font-size: 27px;
+
+    margin-bottom: 15px;
+}
+
+.step p {
+    color: #555;
+}
+
+
+/* =========================
+   WHY LIEVEN
+========================= */
+
+.why {
+    padding: 130px 30px;
+
+    max-width: 1250px;
+
+    margin: auto;
+}
+
+.why-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+}
+
+.why h2 {
+    font-size: 65px;
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+}
+
+.why-content p {
+    font-size: 20px;
+
+    color: #555;
+
+    margin-bottom: 25px;
+}
+
+.points {
+    margin-top: 30px;
+}
+
+.point {
+    padding: 18px 0;
+
+    border-top: 1px solid #ccc;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    background: #ff5a00;
+
+    color: white;
+
+    padding: 130px 30px;
+}
+
+.cta-inner {
+    max-width: 1250px;
+
+    margin: auto;
+}
+
+.cta h2 {
+    font-size: clamp(55px, 8vw, 105px);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+
+    max-width: 1000px;
+}
+
+.cta p {
+    margin-top: 35px;
+
+    font-size: 20px;
+
+    max-width: 650px;
+}
+
+.cta-button {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 17px 30px;
+
+    background: #111;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: #111;
+
+    color: white;
+
+    padding: 90px 30px;
+}
+
+.contact-inner {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+}
+
+.contact h2 {
+    font-size: 55px;
+
+    line-height: 1;
+}
+
+.contact-details {
+    font-size: 19px;
+}
+
+.contact-details div {
+    padding: 18px 0;
+
+    border-bottom: 1px solid #444;
+}
+
+.contact-details a {
+    color: white;
+
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    color: #ff5a00;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #080808;
+
+    color: #777;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px) {
+
+    .nav {
+        padding: 17px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 140px 20px 80px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+
+    .intro,
+    .industries,
+    .why {
+        padding: 80px 20px;
+    }
+
+    .intro-grid,
+    .why-grid,
+    .contact-inner {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .intro h2,
+    .industries h2,
+    .process h2,
+    .why h2 {
+        font-size: 45px;
+    }
+
+    .intro-text {
+        font-size: 21px;
+    }
+
+    .capabilities {
+        padding: 80px 20px;
+    }
+
+    .capability-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .capability {
+        padding: 35px 0 !important;
+
+        border-left: none !important;
+    }
+
+    .capability.primary {
+        margin: 0 0 10px;
+
+        padding: 35px !important;
+    }
+
+    .industry-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .industry {
+        min-height: 190px;
+
+        padding: 20px;
+    }
+
+    .process {
+        padding: 80px 20px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .step {
+        min-height: auto;
+    }
+
+    .cta {
+        padding: 90px 20px;
+    }
+
+    .cta h2 {
+        font-size: 58px;
+
+        letter-spacing: -3px;
+    }
+
+    .contact {
+        padding: 70px 20px;
+    }
+
+    .contact h2 {
+        font-size: 45px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
 <div class="nav">
-<div class="logo">LIEVEN<span>.</span></div>
-<div class="nav-links">
-<a href="#capabilities">Capabilities</a>
-<a href="#industries">Industries</a>
-<a href="#process">Process</a>
-<a href="#contact">Contact</a>
+
+    <div class="logo">
+        LIEVEN<span>.</span>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="#capabilities">
+            Capabilities
+        </a>
+
+        <a href="#industries">
+            Industries
+        </a>
+
+        <a href="#process">
+            Process
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </div>
+
 </div>
-</div>
+
 </header>
 
+
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
-<div class="small-label">Hardware · Electronics · Semiconductor Engineering</div>
-<h1>Build the<br><span>Hardware.</span></h1>
-<p class="hero-description">
-LIEVEN is an electronics and semiconductor engineering company focused on PCB design,
-FPGA development, embedded systems and design verification for demanding applications.
-</p>
-<div class="hero-buttons">
-<a href="#contact" class="btn btn-dark">Discuss a Project →</a>
-<a href="#capabilities" class="btn btn-light">Explore Capabilities</a>
-</div>
+
+    <div class="small-label">
+        Semiconductor · Hardware · Electronics Engineering
+    </div>
+
+
+    <h1>
+
+        Verify.<br>
+
+        Design.<br>
+
+        <span>Build.</span>
+
+    </h1>
+
+
+    <p class="hero-description">
+
+        LIEVEN provides Design Verification, FPGA Engineering,
+        PCB Design and Embedded Systems engineering for
+        complex semiconductor and electronic products.
+
+    </p>
+
+
+    <div class="hero-buttons">
+
+        <a href="#contact" class="btn btn-dark">
+            Discuss a Project →
+        </a>
+
+        <a href="#capabilities" class="btn btn-light">
+            Explore Capabilities
+        </a>
+
+    </div>
+
 </section>
+
+
+
+<!-- =========================
+     MARQUEE
+========================= -->
 
 <div class="marquee">
+
 <div class="marquee-content">
-<span>PCB DESIGN</span><span>FPGA</span><span>DESIGN VERIFICATION</span>
-<span>CPU VERIFICATION</span><span>IP VERIFICATION</span><span>SOC VERIFICATION</span>
-<span>RISC-V</span><span>ARM</span><span>EMBEDDED SYSTEMS</span>
-<span>MEDICAL</span><span>DEFENCE</span><span>AUTOMOTIVE</span><span>EV</span>
-<span>PCB DESIGN</span><span>FPGA</span><span>DESIGN VERIFICATION</span>
-<span>CPU VERIFICATION</span><span>IP VERIFICATION</span><span>SOC VERIFICATION</span>
-<span>RISC-V</span><span>ARM</span>
+
+    <span>DESIGN VERIFICATION</span>
+
+    <span>CPU VERIFICATION</span>
+
+    <span>IP VERIFICATION</span>
+
+    <span>SOC VERIFICATION</span>
+
+    <span>RISC-V</span>
+
+    <span>ARM</span>
+
+    <span>FPGA</span>
+
+    <span>PCB DESIGN</span>
+
+    <span>EMBEDDED SYSTEMS</span>
+
+    <span>MEDICAL</span>
+
+    <span>DEFENCE</span>
+
+    <span>AUTOMOTIVE</span>
+
+    <span>EV</span>
+
+
+    <!-- duplicate for continuous animation -->
+
+    <span>DESIGN VERIFICATION</span>
+
+    <span>CPU VERIFICATION</span>
+
+    <span>IP VERIFICATION</span>
+
+    <span>SOC VERIFICATION</span>
+
+    <span>RISC-V</span>
+
+    <span>ARM</span>
+
+    <span>FPGA</span>
+
+    <span>PCB DESIGN</span>
+
+    <span>EMBEDDED SYSTEMS</span>
+
 </div>
+
 </div>
+
+
+
+<!-- =========================
+     INTRO
+========================= -->
 
 <section class="intro">
+
 <div class="intro-grid">
-<div>
-<div class="section-number">01 / LIEVEN</div>
-<h2>One engineering<br>partner.</h2>
+
+
+    <div>
+
+        <div class="section-number">
+            01 / LIEVEN
+        </div>
+
+        <h2>
+            Semiconductor<br>
+            & Hardware<br>
+            Engineering.
+        </h2>
+
+    </div>
+
+
+    <div class="intro-text">
+
+        LIEVEN is an engineering company focused on
+        <strong>Design Verification, FPGA, PCB Design
+        and Embedded Systems.</strong>
+
+        <br><br>
+
+        Our verification expertise covers
+        <strong>CPU, IP and SoC verification</strong>
+        across <strong>RISC-V and Arm architectures.</strong>
+
+        <br><br>
+
+        Based in
+        <strong>Marathahalli, Bangalore</strong>,
+        we work with product companies, semiconductor
+        teams and engineering organisations.
+
+    </div>
+
+
 </div>
-<div class="intro-text">
-From an initial concept to a working electronic or semiconductor system,
-we bring together <strong>hardware, FPGA, embedded and verification engineering</strong>
-to turn product ideas into real systems.
-<br><br>
-Based in <strong>Marathahalli, Bangalore</strong>, LIEVEN works with startups,
-product companies and engineering teams.
-</div>
-</div>
+
 </section>
+
+
+
+<!-- =========================
+     CAPABILITIES
+========================= -->
 
 <section class="capabilities" id="capabilities">
+
+
 <div class="capabilities-inner">
-<div class="capabilities-header">
-<div class="section-number">02 / CAPABILITIES</div>
-<h2>Engineering<br>that connects.</h2>
-<p>Hardware design, digital engineering, embedded systems and verification working together as one engineering system.</p>
+
+
+    <div class="capabilities-header">
+
+        <div class="section-number">
+            02 / CAPABILITIES
+        </div>
+
+        <h2>
+            Verification<br>
+            first.
+        </h2>
+
+        <p>
+            Our primary engineering capability is Design Verification,
+            followed by FPGA, PCB and Embedded Systems engineering.
+        </p>
+
+    </div>
+
+
+
+    <div class="capability-grid">
+
+
+        <!-- 01 DESIGN VERIFICATION -->
+
+        <div class="capability primary">
+
+            <div class="capability-number">
+                01 / DESIGN VERIFICATION
+            </div>
+
+
+            <h3>
+                Design Verification
+            </h3>
+
+
+            <p>
+
+                Functional verification of semiconductor IP,
+                CPUs and SoCs using SystemVerilog and UVM,
+                with constrained-random testing, assertions,
+                functional coverage and code coverage.
+
+            </p>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    SYSTEMVERILOG
+                </span>
+
+                <span class="tag">
+                    UVM
+                </span>
+
+                <span class="tag">
+                    ASSERTIONS
+                </span>
+
+                <span class="tag">
+                    FUNCTIONAL COVERAGE
+                </span>
+
+                <span class="tag">
+                    CODE COVERAGE
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 02 CPU -->
+
+        <div class="capability primary">
+
+            <div class="capability-number">
+                02 / PROCESSOR
+            </div>
+
+
+            <h3>
+                CPU Verification
+            </h3>
+
+
+            <p>
+
+                Verification of CPU architectures including
+                RISC-V and Arm-based processors, covering
+                instruction execution, exceptions, interrupts,
+                privilege modes, memory systems and
+                architectural behaviour.
+
+            </p>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    RISC-V
+                </span>
+
+                <span class="tag">
+                    ARM
+                </span>
+
+                <span class="tag">
+                    ISA
+                </span>
+
+                <span class="tag">
+                    CPU
+                </span>
+
+                <span class="tag">
+                    EXCEPTIONS
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 03 IP -->
+
+        <div class="capability">
+
+            <div class="capability-number">
+                03 / IP
+            </div>
+
+
+            <h3>
+                IP Verification
+            </h3>
+
+
+            <p>
+
+                Verification of reusable hardware IP including
+                controllers, memories, accelerators, peripherals
+                and protocol-based components.
+
+            </p>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    IP
+                </span>
+
+                <span class="tag">
+                    UVM
+                </span>
+
+                <span class="tag">
+                    AMBA
+                </span>
+
+                <span class="tag">
+                    AXI
+                </span>
+
+                <span class="tag">
+                    APB
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 04 SOC -->
+
+        <div class="capability">
+
+            <div class="capability-number">
+                04 / SOC
+            </div>
+
+
+            <h3>
+                SoC Verification
+            </h3>
+
+
+            <p>
+
+                Subsystem and SoC-level verification covering
+                processor subsystems, interconnects, peripherals,
+                memory systems and end-to-end system scenarios.
+
+            </p>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    SOC
+                </span>
+
+                <span class="tag">
+                    SUBSYSTEM
+                </span>
+
+                <span class="tag">
+                    AMBA
+                </span>
+
+                <span class="tag">
+                    NOC
+                </span>
+
+                <span class="tag">
+                    UVM
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 05 FPGA -->
+
+        <div class="capability">
+
+            <div class="capability-number">
+                05 / DIGITAL
+            </div>
+
+
+            <h3>
+                FPGA Engineering
+            </h3>
+
+
+            <p>
+
+                RTL development, FPGA architecture,
+                digital interfaces, IP integration,
+                simulation, verification and
+                hardware bring-up.
+
+            </p>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    VERILOG
+                </span>
+
+                <span class="tag">
+                    SYSTEMVERILOG
+                </span>
+
+                <span class="tag">
+                    RTL
+                </span>
+
+                <span class="tag">
+                    FPGA
+                </span>
+
+                <span class="tag">
+                    IP
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 06 PCB -->
+
+        <div class="capability">
+
+            <div class="capability-number">
+                06 / HARDWARE
+            </div>
+
+
+            <h3>
+                PCB Design
+            </h3>
+
+
+            <p>
+
+                Schematic capture, component selection,
+                multi-layer PCB design, placement, routing,
+                design-for-manufacturing and manufacturing release.
+
+            </p>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    SCHEMATIC
+                </span>
+
+                <span class="tag">
+                    PCB LAYOUT
+                </span>
+
+                <span class="tag">
+                    MULTI-LAYER
+                </span>
+
+                <span class="tag">
+                    DFM
+                </span>
+
+                <span class="tag">
+                    GERBER
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 07 EMBEDDED -->
+
+        <div class="capability">
+
+            <div class="capability-number">
+                07 / EMBEDDED
+            </div>
+
+
+            <h3>
+                Embedded Systems
+            </h3>
+
+
+            <p>
+
+                MCU-based systems, firmware, device drivers,
+                RTOS, communication interfaces and
+                hardware-software integration.
+
+            </p>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    MCU
+                </span>
+
+                <span class="tag">
+                    RTOS
+                </span>
+
+                <span class="tag">
+                    C / C++
+                </span>
+
+                <span class="tag">
+                    DRIVERS
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 08 VALIDATION -->
+
+        <div class="capability">
+
+            <div class="capability-number">
+                08 / VALIDATION
+            </div>
+
+
+            <h3>
+                Hardware Validation
+            </h3>
+
+
+            <p>
+
+                Prototype bring-up, debugging,
+                interface validation, testing and
+                hardware-software integration.
+
+            </p>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    BRING-UP
+                </span>
+
+                <span class="tag">
+                    DEBUG
+                </span>
+
+                <span class="tag">
+                    TEST
+                </span>
+
+                <span class="tag">
+                    VALIDATION
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
 </div>
 
-<div class="capability-grid">
-
-<div class="capability">
-<div class="capability-number">01 / HARDWARE</div>
-<h3>PCB Design</h3>
-<p>Schematic capture, component selection, multi-layer PCB design, placement, routing, DFM and manufacturing release.</p>
-<div class="tags"><span class="tag">SCHEMATIC</span><span class="tag">PCB LAYOUT</span><span class="tag">STACK-UP</span><span class="tag">DFM</span><span class="tag">GERBER</span></div>
-</div>
-
-<div class="capability">
-<div class="capability-number">02 / DIGITAL</div>
-<h3>FPGA Engineering</h3>
-<p>RTL development, FPGA architecture, digital interfaces, IP integration, simulation and hardware bring-up.</p>
-<div class="tags"><span class="tag">VERILOG</span><span class="tag">SYSTEMVERILOG</span><span class="tag">RTL</span><span class="tag">FPGA</span></div>
-</div>
-
-<div class="capability">
-<div class="capability-number">03 / VERIFICATION</div>
-<h3>Design Verification</h3>
-<p>Functional verification of IP, CPU and SoC designs using SystemVerilog, UVM, constrained-random testing, assertions and coverage-driven verification.</p>
-<div class="tags"><span class="tag">SYSTEMVERILOG</span><span class="tag">UVM</span><span class="tag">ASSERTIONS</span><span class="tag">COVERAGE</span></div>
-</div>
-
-<div class="capability">
-<div class="capability-number">04 / PROCESSOR</div>
-<h3>CPU Verification</h3>
-<p>Verification of RISC-V and Arm-based CPU designs, including instruction execution, exceptions, interrupts, memory systems and architectural behaviour.</p>
-<div class="tags"><span class="tag">RISC-V</span><span class="tag">ARM</span><span class="tag">ISA</span><span class="tag">CPU</span></div>
-</div>
-
-<div class="capability">
-<div class="capability-number">05 / IP</div>
-<h3>IP Verification</h3>
-<p>Verification of reusable hardware IP including interfaces, controllers, memories, accelerators and protocol-based components.</p>
-<div class="tags"><span class="tag">IP</span><span class="tag">UVM</span><span class="tag">AMBA</span><span class="tag">AXI</span><span class="tag">APB</span></div>
-</div>
-
-<div class="capability">
-<div class="capability-number">06 / SOC</div>
-<h3>SoC Verification</h3>
-<p>Subsystem and SoC-level verification covering processor subsystems, interconnects, peripherals, memory systems and end-to-end system scenarios.</p>
-<div class="tags"><span class="tag">SOC</span><span class="tag">SUBSYSTEM</span><span class="tag">AMBA</span><span class="tag">NOC</span><span class="tag">UVM</span></div>
-</div>
-
-<div class="capability">
-<div class="capability-number">07 / EMBEDDED</div>
-<h3>Embedded Systems</h3>
-<p>MCU-based systems, firmware, device drivers, RTOS, communication interfaces and hardware-software integration.</p>
-<div class="tags"><span class="tag">MCU</span><span class="tag">RTOS</span><span class="tag">C/C++</span><span class="tag">DRIVERS</span></div>
-</div>
-
-<div class="capability">
-<div class="capability-number">08 / VALIDATION</div>
-<h3>Hardware Validation</h3>
-<p>Prototype bring-up, debugging, interface validation, testing and hardware-software integration.</p>
-<div class="tags"><span class="tag">BRING-UP</span><span class="tag">DEBUG</span><span class="tag">TEST</span><span class="tag">VALIDATION</span></div>
-</div>
-
-</div>
-</div>
 </section>
 
-<section class="industries" id="industries">
-<div class="section-number">03 / INDUSTRIES</div>
-<h2>Built for<br>demanding systems.</h2>
+
+
+<!-- =========================
+     VERIFICATION FOCUS
+========================= -->
+
+<section class="industries" id="verification">
+
+
+<div class="section-number">
+    03 / VERIFICATION FOCUS
+</div>
+
+
+<h2>
+    Verify the<br>
+    complete design.
+</h2>
+
+
 <div class="industry-grid">
-<div class="industry"><div class="industry-number">01</div><h3>Medical</h3><p>Electronics, embedded systems, sensing and control applications.</p></div>
-<div class="industry"><div class="industry-number">02</div><h3>Defence</h3><p>Embedded, FPGA and electronic systems for specialised applications.</p></div>
-<div class="industry"><div class="industry-number">03</div><h3>Automotive</h3><p>Electronic controllers, communication and embedded systems.</p></div>
-<div class="industry"><div class="industry-number">04</div><h3>Electric Vehicles</h3><p>EV control electronics, monitoring and embedded systems.</p></div>
+
+
+    <div class="industry">
+
+        <div class="industry-number">
+            01
+        </div>
+
+        <h3>
+            CPU
+        </h3>
+
+        <p>
+            Instruction execution, ISA behaviour,
+            exceptions, interrupts and architectural
+            verification.
+        </p>
+
+    </div>
+
+
+    <div class="industry">
+
+        <div class="industry-number">
+            02
+        </div>
+
+        <h3>
+            IP
+        </h3>
+
+        <p>
+            Reusable IP, interfaces, controllers,
+            memories and accelerators.
+        </p>
+
+    </div>
+
+
+    <div class="industry">
+
+        <div class="industry-number">
+            03
+        </div>
+
+        <h3>
+            SoC
+        </h3>
+
+        <p>
+            Subsystem integration, interconnect,
+            peripherals, memory and system scenarios.
+        </p>
+
+    </div>
+
+
+    <div class="industry">
+
+        <div class="industry-number">
+            04
+        </div>
+
+        <h3>
+            Architectures
+        </h3>
+
+        <p>
+            RISC-V and Arm based processor
+            and SoC verification.
+        </p>
+
+    </div>
+
+
 </div>
+
 </section>
+
+
+
+<!-- =========================
+     INDUSTRIES
+========================= -->
+
+<section class="industries">
+
+
+<div class="section-number">
+    04 / INDUSTRIES
+</div>
+
+
+<h2>
+    Built for<br>
+    demanding systems.
+</h2>
+
+
+<div class="industry-grid">
+
+
+    <div class="industry">
+
+        <div class="industry-number">
+            01
+        </div>
+
+        <h3>
+            Medical
+        </h3>
+
+        <p>
+            Electronics, embedded systems,
+            sensing and control applications.
+        </p>
+
+    </div>
+
+
+    <div class="industry">
+
+        <div class="industry-number">
+            02
+        </div>
+
+        <h3>
+            Defence
+        </h3>
+
+        <p>
+            Embedded, FPGA and electronic systems
+            for specialised applications.
+        </p>
+
+    </div>
+
+
+    <div class="industry">
+
+        <div class="industry-number">
+            03
+        </div>
+
+        <h3>
+            Automotive
+        </h3>
+
+        <p>
+            Electronic controllers,
+            communication and embedded systems.
+        </p>
+
+    </div>
+
+
+    <div class="industry">
+
+        <div class="industry-number">
+            04
+        </div>
+
+        <h3>
+            Electric Vehicles
+        </h3>
+
+        <p>
+            EV control electronics,
+            monitoring and embedded systems.
+        </p>
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PROCESS
+========================= -->
 
 <section class="process" id="process">
+
+
 <div class="process-inner">
-<div class="section-number">04 / PROCESS</div>
-<h2>From idea<br>to hardware.</h2>
+
+
+<div class="section-number">
+    05 / PROCESS
+</div>
+
+
+<h2>
+    From requirement<br>
+    to validation.
+</h2>
+
+
 <div class="process-grid">
-<div class="step"><div class="step-number">STEP 01</div><h3>Understand</h3><p>Understand product requirements, interfaces, power, mechanical constraints and application.</p></div>
-<div class="step"><div class="step-number">STEP 02</div><h3>Design</h3><p>Develop hardware architecture, schematic, PCB, FPGA and verification strategy.</p></div>
-<div class="step"><div class="step-number">STEP 03</div><h3>Build</h3><p>Prepare manufacturing data, prototype hardware and integrate firmware or verification environments.</p></div>
-<div class="step"><div class="step-number">STEP 04</div><h3>Validate</h3><p>Bring up hardware, debug, test and validate the complete system or semiconductor design.</p></div>
+
+
+    <div class="step">
+
+        <div class="step-number">
+            STEP 01
+        </div>
+
+        <h3>
+            Understand
+        </h3>
+
+        <p>
+            Understand architecture, requirements,
+            interfaces, protocols and verification goals.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">
+            STEP 02
+        </div>
+
+        <h3>
+            Plan
+        </h3>
+
+        <p>
+            Define verification strategy,
+            test scenarios, coverage goals
+            and engineering approach.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">
+            STEP 03
+        </div>
+
+        <h3>
+            Implement
+        </h3>
+
+        <p>
+            Develop testbenches, RTL, FPGA,
+            firmware or hardware according
+            to the project scope.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">
+            STEP 04
+        </div>
+
+        <h3>
+            Validate
+        </h3>
+
+        <p>
+            Debug failures, analyse coverage,
+            validate functionality and drive
+            the project toward closure.
+        </p>
+
+    </div>
+
+
 </div>
+
 </div>
+
 </section>
+
+
+
+<!-- =========================
+     WHY LIEVEN
+========================= -->
 
 <section class="why">
+
+
 <div class="why-grid">
-<div>
-<div class="section-number">05 / APPROACH</div>
-<h2>Engineering<br>beyond the PCB.</h2>
+
+
+    <div>
+
+        <div class="section-number">
+            06 / APPROACH
+        </div>
+
+
+        <h2>
+            Engineering<br>
+            beyond the<br>
+            specification.
+        </h2>
+
+    </div>
+
+
+    <div class="why-content">
+
+
+        <p>
+
+            LIEVEN combines semiconductor verification,
+            FPGA, hardware and embedded engineering
+            to understand the complete product.
+
+        </p>
+
+
+        <p>
+
+            Our engineering approach focuses on
+            requirements, architecture, implementation,
+            verification, debugging and validation.
+
+        </p>
+
+
+        <div class="points">
+
+
+            <div class="point">
+                → Requirement-driven engineering
+            </div>
+
+
+            <div class="point">
+                → CPU, IP and SoC verification
+            </div>
+
+
+            <div class="point">
+                → RISC-V and Arm architectures
+            </div>
+
+
+            <div class="point">
+                → SystemVerilog and UVM
+            </div>
+
+
+            <div class="point">
+                → FPGA and RTL engineering
+            </div>
+
+
+            <div class="point">
+                → PCB and embedded engineering
+            </div>
+
+
+        </div>
+
+    </div>
+
 </div>
-<div class="why-content">
-<p>A PCB is only one part of an electronic product. LIEVEN brings together hardware, FPGA, embedded and semiconductor verification engineering to understand the complete system.</p>
-<p>Our approach focuses on practical implementation, manufacturability, verification, validation and reliable hardware-software integration.</p>
-<div class="points">
-<div class="point">→ Requirement-driven engineering</div>
-<div class="point">→ Hardware + firmware understanding</div>
-<div class="point">→ CPU, IP and SoC verification</div>
-<div class="point">→ Prototype and bring-up support</div>
-<div class="point">→ Design documentation and release</div>
-</div>
-</div>
-</div>
+
 </section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta">
+
+
 <div class="cta-inner">
-<div class="section-number">06 / START A PROJECT</div>
-<h2>Have a board<br>or silicon to build?</h2>
-<p>Tell us what you're building. Let's discuss the requirements, engineering scope and next steps.</p>
-<a href="tel:+917510668966" class="cta-button">Call LIEVEN → +91 75106 68966</a>
+
+
+    <div class="section-number">
+        07 / START A PROJECT
+    </div>
+
+
+    <h2>
+        Have a design<br>
+        to verify?
+    </h2>
+
+
+    <p>
+
+        Tell us about your CPU, IP, SoC,
+        FPGA, PCB or embedded project.
+        Let's discuss the requirements,
+        engineering scope and next steps.
+
+    </p>
+
+
+    <a
+        href="tel:+917510668966"
+        class="cta-button">
+
+        Call LIEVEN → +91 75106 68966
+
+    </a>
+
+
 </div>
+
 </section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="contact" id="contact">
+
+
 <div class="contact-inner">
-<div>
-<div class="section-number">CONTACT</div>
-<h2>Let's build<br>something real.</h2>
+
+
+    <div>
+
+        <div class="section-number">
+            CONTACT
+        </div>
+
+
+        <h2>
+            Let's build<br>
+            something real.
+        </h2>
+
+    </div>
+
+
+    <div class="contact-details">
+
+
+        <div>
+
+            <strong>
+                Phone
+            </strong>
+
+            <br>
+
+            <a href="tel:+917510668966">
+                +91 75106 68966
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Location
+            </strong>
+
+            <br>
+
+            Marathahalli, Bangalore,
+            Karnataka, India
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Primary Capability
+            </strong>
+
+            <br>
+
+            Design Verification
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Verification
+            </strong>
+
+            <br>
+
+            CPU · IP · SoC · RISC-V · Arm
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Engineering
+            </strong>
+
+            <br>
+
+            FPGA · PCB Design · Embedded Systems
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Industries
+            </strong>
+
+            <br>
+
+            Medical · Defence · Automotive · EV
+
+        </div>
+
+
+    </div>
+
 </div>
-<div class="contact-details">
-<div><strong>Phone</strong><br><a href="tel:+917510668966">+91 75106 68966</a></div>
-<div><strong>Location</strong><br>Marathahalli, Bangalore, Karnataka, India</div>
-<div><strong>Services</strong><br>PCB Design · FPGA · Embedded · Design Verification</div>
-<div><strong>Verification</strong><br>CPU · IP · SoC · RISC-V · Arm</div>
-<div><strong>Industries</strong><br>Medical · Defence · Automotive · EV</div>
-</div>
-</div>
+
 </section>
 
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-<div>© 2026 LIEVEN. All Rights Reserved.</div>
-<div>Marathahalli · Bangalore · India</div>
+
+
+    <div>
+        © 2026 LIEVEN. All Rights Reserved.
+    </div>
+
+
+    <div>
+        Marathahalli · Bangalore · India
+    </div>
+
+
 </footer>
+
 
 </body>
 </html>
